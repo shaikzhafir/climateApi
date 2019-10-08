@@ -4,7 +4,7 @@
 
 const fetch = require('node-fetch');
 
-const AQI_API = "https://api.waqi.info/feed/singapore/?token=21f0d11cf0d4752c65ea4d1520d3544966a92c42"
+
 
 let airQuality = 20;
 
