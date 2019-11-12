@@ -4,13 +4,13 @@ const SG_CODE = "singapore" ;   //country codes to be used
 const CN_CODE = "romania";
 const IND_CODE = "noida";
 const INDO_CODE = "indonesia";
-
+const INSERT_YOUR_TOKEN = process.argv();
 
 const fetch = require('node-fetch'); //required to use fetch function and async await
 
 //async await to call the country, to be replicated inside the board
 async function getAir(country){ 
-    const response = await fetch("https://api.waqi.info/feed/" + country + "/?token=21f0d11cf0d4752c65ea4d1520d3544966a92c42");
+    const response = await fetch("https://api.waqi.info/feed/" + country + "/?token=INSERT_YOUR_TOKEN");
     const data = await response.json();
     let airQuality = data.data.aqi;
     return airQuality;
